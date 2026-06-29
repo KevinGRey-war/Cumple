@@ -1,4 +1,4 @@
-const imageFiles = [
+const carouselImages = [
   "foto-01.jpg",
   "foto-02.jpg",
   "foto-03.jpg",
@@ -10,7 +10,10 @@ const imageFiles = [
   "foto-09.jpg",
   "foto-10.jpg",
   "foto-11.jpeg",
-  "foto-12.jpg",
+  "foto-12.jpg"
+];
+
+const heartImages = [
   "foto-13.jpg",
   "foto-14.jpg",
   "foto-15.jpg",
@@ -24,7 +27,6 @@ const imageFiles = [
   "foto-23.jpg",
   "foto-24.jpeg",
   "foto-25.jpg",
-  "foto-26.jpg",
   "foto-26.jpg",
   "foto-27.jpg",
   "foto-28.jpg",
@@ -56,7 +58,7 @@ const imageFiles = [
   "foto-54.jpg",
   "foto-55.jpg",
   "foto-56.jpg",
-  "foto-57.jpg",
+  "foto-57.jpg"
 ];
 
 const phrases = [
@@ -210,8 +212,8 @@ function typeWriter(text, element, speed) {
 
 function buildCoverflow() {
   coverflow.innerHTML = "";
-  const total = imageFiles.length;
-  imageFiles.forEach((file, index) => {
+  const total = carouselImages.length;
+  carouselImages.forEach((file, index) => {
     const card = document.createElement("article");
     const offset = index - (total - 1) / 2;
     const depth = Math.abs(offset);
@@ -254,8 +256,9 @@ function createPhotoElement(file, fallbackText) {
 
 function buildHeart() {
   heartGrid.innerHTML = "";
-  const points = heartPoints(60);
+  const points = heartPoints(Math.max(heartImages.length, 48));
   points.forEach((point, index) => {
+    const file = heartImages[index % heartImages.length];
     const tile = document.createElement("div");
     tile.className = "heart-photo";
     tile.style.setProperty("--x", `${point.x}px`);
@@ -267,7 +270,7 @@ function buildHeart() {
     tile.style.animationDelay = `${index * -.06}s`;
     const enlargeTile = () => {
       tile.style.setProperty("--s", "2.15");
-      showImagePreview(`img/${imageFiles[index % imageFiles.length]}`, "Dennise ♥");
+      showImagePreview(`img/${file}`, "Dennise ♥");
     };
     const restoreTile = () => {
       tile.style.setProperty("--s", "1");
@@ -277,7 +280,7 @@ function buildHeart() {
     tile.addEventListener("pointerenter", enlargeTile);
     tile.addEventListener("mouseleave", restoreTile);
     tile.addEventListener("pointerleave", restoreTile);
-    tile.append(createPhotoElement(imageFiles[index % imageFiles.length], "Dennise ♥"));
+    tile.append(createPhotoElement(file, "Dennise ♥"));
     heartGrid.append(tile);
   });
 }

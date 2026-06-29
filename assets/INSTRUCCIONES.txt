@@ -1,7 +1,9 @@
 COMO PERSONALIZAR EL REGALO
 
-1. Fotos:
-   Coloca tus fotos dentro de la carpeta img/ con estos nombres:
+1. Fotos para el carrusel principal:
+   Estas fotos aparecen en la seccion "Constelacion de fotos".
+   Colocalas dentro de la carpeta img/ con estos nombres:
+
    foto-01.jpg
    foto-02.jpg
    foto-03.jpg
@@ -12,21 +14,40 @@ COMO PERSONALIZAR EL REGALO
    foto-08.jpg
    foto-09.jpg
    foto-10.jpg
-   foto-11.jpg
+   foto-11.jpeg
    foto-12.jpg
 
-   Si quieres usar mas fotos, agrega los nombres en el arreglo imageFiles
-   del archivo script.js.
+2. Fotos para el corazon final:
+   Estas fotos aparecen formando el gran corazon.
+   Colocalas dentro de la carpeta img/ desde:
 
-2. Videos:
+   foto-13.jpg hasta foto-57.jpg
+
+   Nota: en el proyecto actual foto-24 usa extension .jpeg.
+
+3. Cambiar que fotos van en cada parte:
+   Abre script.js y edita estos arreglos:
+
+   carouselImages: fotos del carrusel principal.
+   heartImages: fotos del corazon final.
+
+4. Videos:
    Coloca los videos dentro de la carpeta video/.
    El video principal de muestra se llama video-01.mp4.
 
-3. Musica:
+5. Musica:
    Coloca la cancion dentro de la carpeta music/ con este nombre:
    musica.mp3
 
-4. Abrir:
+6. Pantallas soportadas:
+   El proyecto tiene estilos para:
+
+   PC de escritorio.
+   Laptop.
+   Tablet.
+   Celular.
+
+7. Abrir:
    Abre index.html en el navegador.
    Para que videos y musica funcionen mejor, se recomienda abrirlo desde
    un servidor local.
