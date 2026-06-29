@@ -1,0 +1,32 @@
+COMO PERSONALIZAR EL REGALO
+
+1. Fotos:
+   Coloca tus fotos dentro de la carpeta img/ con estos nombres:
+   foto-01.jpg
+   foto-02.jpg
+   foto-03.jpg
+   foto-04.jpg
+   foto-05.jpg
+   foto-06.jpg
+   foto-07.jpg
+   foto-08.jpg
+   foto-09.jpg
+   foto-10.jpg
+   foto-11.jpg
+   foto-12.jpg
+
+   Si quieres usar mas fotos, agrega los nombres en el arreglo imageFiles
+   del archivo script.js.
+
+2. Videos:
+   Coloca los videos dentro de la carpeta video/.
+   El video principal de muestra se llama video-01.mp4.
+
+3. Musica:
+   Coloca la cancion dentro de la carpeta music/ con este nombre:
+   musica.mp3
+
+4. Abrir:
+   Abre index.html en el navegador.
+   Para que videos y musica funcionen mejor, se recomienda abrirlo desde
+   un servidor local.

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#020412">
+  <title>Feliz Cumpleaños Dennise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <canvas id="universe" aria-hidden="true"></canvas>
+  <canvas id="fireworks" aria-hidden="true"></canvas>
+
+  <div class="loader" id="loader">
+    <div class="loader-heart">♥</div>
+    <p>Cargando nuestra historia...</p>
+    <div class="progress"><span></span></div>
+  </div>
+
+  <button class="music-control glass" id="musicControl" aria-label="Control de musica">
+    <span id="musicIcon">♪</span>
+    <input id="volume" type="range" min="0" max="1" step="0.05" value="0.65" aria-label="Volumen">
+  </button>
+  <audio id="music" src="music/musica.mp3" loop preload="auto"></audio>
+
+  <main class="film">
+    <section class="hero scene active" id="hero">
+      <div class="moon" aria-hidden="true"></div>
+      <div class="cloud cloud-one" aria-hidden="true"></div>
+      <div class="cloud cloud-two" aria-hidden="true"></div>
+      <div class="hero-card glass">
+        <div class="big-heart">♥</div>
+        <p class="eyebrow">Feliz Cumpleaños</p>
+        <h1>Dennise</h1>
+        <p class="subtitle">Mi verdadero amor</p>
+        <button class="primary-button" id="startStory">Comenzar nuestra historia</button>
+      </div>
+    </section>
+
+    <section class="intro scene" id="intro">
+      <div class="cinema-line" id="introLine">Hay personas que llegan a nuestra vida...</div>
+    </section>
+
+    <section class="letter scene" id="letter">
+      <div class="section-copy">
+        <p class="eyebrow">Carta para ti</p>
+        <h2>Un mensaje guardado entre estrellas</h2>
+      </div>
+      <div class="envelope-wrap">
+        <button class="envelope" id="openLetter" aria-label="Abrir carta">
+          <span class="flap"></span>
+          <span class="seal">♥</span>
+          <span class="paper-preview"></span>
+        </button>
+        <article class="letter-paper glass" id="letterPaper">
+          <p id="typedLetter"></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="gallery scene" id="gallery">
+      <div class="section-copy">
+        <p class="eyebrow">Constelacion de fotos</p>
+        <h2>Nuestros recuerdos flotando en el universo</h2>
+        <p>Cada imagen aparece como una escena de pelicula, con profundidad, brillo y movimiento suave.</p>
+      </div>
+      <div class="coverflow" id="coverflow"></div>
+    </section>
+
+    <section class="chapters scene" id="chapters">
+      <div class="section-copy">
+        <p class="eyebrow">Nuestra pelicula</p>
+        <h2>Capitulos de una historia que sigo eligiendo</h2>
+      </div>
+      <div class="timeline" id="timeline">
+        <article class="chapter glass">
+          <span>Capitulo 1</span>
+          <h3>Antes de conocernos</h3>
+          <p>La vida preparaba caminos distintos para que un dia pudieran encontrarse.</p>
+        </article>
+        <article class="chapter glass video-chapter">
+          <span>Escena especial</span>
+          <video controls playsinline preload="metadata" src="video/video-01.mp4"></video>
+        </article>
+        <article class="chapter glass">
+          <span>Capitulo 2</span>
+          <h3>Nuestra historia</h3>
+          <p>Desde que llegaste, muchas cosas encontraron color, sentido y una razon para sonreir.</p>
+          <video controls playsinline preload="metadata" src="video/video-02.mp4"></video>
+        </article>
+        <article class="chapter glass">
+          <span>Capitulo 3</span>
+          <h3>Nuestra familia</h3>
+          <p>Lo bonito no solo se vive, tambien se cuida, se abraza y se construye cada dia.</p>
+          <video controls playsinline preload="metadata" src="video/video-03.mp4"></video>
+        </article>
+        <article class="chapter glass">
+          <span>Capitulo 4</span>
+          <h3>Nuestros recuerdos</h3>
+          <p>Hay segundos que se quedan para siempre porque contigo todo se siente mas vivo.</p>
+          <video controls playsinline preload="metadata" src="video/video-04.mp4"></video>
+        </article>
+        <article class="chapter glass">
+          <span>Capitulo 5</span>
+          <h3>Nuestro futuro</h3>
+          <p>Quiero seguir caminando contigo, en las buenas, en las malas y en todos los dias por venir.</p>
+          <video controls playsinline preload="metadata" src="video/video-05.mp4"></video>
+        </article>
+      </div>
+    </section>
+
+    <section class="phrases scene" id="phrases">
+      <div class="phrase-card glass">
+        <p id="phraseText">Gracias por existir.</p>
+      </div>
+      <div class="counter glass">
+        <span>Desde 2014 han pasado</span>
+        <strong id="loveCounter">0 dias</strong>
+        <span>y aun asi esto apenas comienza.</span>
+      </div>
+    </section>
+
+    <section class="photo-heart scene" id="photoHeart">
+      <div class="section-copy">
+        <p class="eyebrow">Nuestro corazon</p>
+        <h2>Todo lo vivido vuelve a formar amor</h2>
+      </div>
+      <div class="heart-grid" id="heartGrid"></div>
+    </section>
+
+    <section class="finale scene" id="finale">
+      <div class="final-message glass">
+        <div class="big-heart">♥</div>
+        <p class="eyebrow">Feliz Cumpleaños</p>
+        <h2>Dennise</h2>
+        <p>Gracias por hacer mi vida más bonita.</p>
+        <p>Con amor,</p>
+        <strong>Tu verdadero amor.</strong>
+      </div>
+    </section>
+  </main>
+
+  <div class="scene-dots" id="sceneDots" aria-label="Navegacion por escenas"></div>
+  <div class="falling-layer" id="fallingLayer" aria-hidden="true"></div>
+  <div class="image-preview" id="imagePreview" aria-hidden="true">
+    <div class="preview-glow"></div>
+    <img id="previewImage" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
